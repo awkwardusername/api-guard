@@ -1,17 +1,6 @@
 <?php
 
-return array(
-
-    /*
-    |--------------------------------------------------------------------------
-    | ApiGuard key generator route
-    |--------------------------------------------------------------------------
-    |
-    | You can set this to false once you're done generating an initial API key
-    |
-    */
-
-    'generateApiKeyRoute'  => true,
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -24,6 +13,30 @@ return array(
     */
 
     'logging'              => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | ApiKey model
+    |--------------------------------------------------------------------------
+    |
+    | If you're extending the ApiKey model, define the namespace of the class
+    | here.
+    |
+    */
+
+    'model'                => 'Chrisbjr\ApiGuard\Models\ApiKey',
+
+    /*
+    |--------------------------------------------------------------------------
+    | ApiLog model
+    |--------------------------------------------------------------------------
+    |
+    | If you're extending the ApiLog model, define the namespace of the class
+    | here.
+    |
+    */
+
+    'apiLogModel'          => 'Chrisbjr\ApiGuard\Models\ApiLog',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,4 +103,4 @@ return array(
 
     'methodLimitIncrement' => '1 hour',
 
-);
+];
